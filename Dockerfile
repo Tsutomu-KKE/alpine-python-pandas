@@ -15,7 +15,7 @@ RUN apk add --update --no-cache musl python3-dev freetype-dev make g++ gfortran 
     cp ~/src/lapack-3.5.0/liblapack.a /usr/local/lib && \
     wget -q --no-check-certificate "https://bootstrap.pypa.io/get-pip.py" -O /dev/stdout | python3 && \
     pip install numpy==1.9.3 && \
-    pip install networkx pandas more_itertools && \
+    pip install networkx pandas pyyaml more_itertools && \
     apk del build-dependencies && \
     rm -rf /var/cache/apk/* /tmp/* /root/src/
 CMD ["sh"]
